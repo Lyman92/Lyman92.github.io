@@ -1,6 +1,14 @@
-{% extends "main/main_base.html" %}
-
-{% block css %}
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+    
+    <script src="static/js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script>
+    function onload(){
+        $('#tm').prop("checked", false);
+    }
+     </script>
+    <style type="text/css">
     html,body{
         height: 100%;
         font-family: "Microsoft Yahei";
@@ -54,54 +62,83 @@
     .title .small {
         font-size: 16px;
     }
-{% endblock %}
+</style>
+    <link rel="stylesheet" type="text/css" href="static/main/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>  </title>
+</head>
+<body onload="onload()">
+	<div class="mobile">
+		
+			<input type="checkbox" id="tm">
+			
+			<!-- menu -->
+			<ul class="sidenav">
+				<li><a href="main.html"><b>产&nbsp;&nbsp;品</b></a></li>
+				<li><a href="main_contact_us.html"><b>联系我们</b></a></li>
+			</ul>
 
-{% block title %} {{ title }} {% endblock %}
+			<section id="section_main">
+				<div class="main_menu">
+					<label for="tm">
+						<img class="ic_menu" src="static/main/ic_menu.png" alt="menu">
+					</label>
+				</div>
 
-{% block content %}
+				<div class="content">
+				    
     <div class="div_half">
-        <a href="{% url 'main_product_content' products.0.id %}">
-            <img class="img_bg" src="{{ imgs.0 }}" alt="产品图示">
+        <a href="product1.html">
+            <img class="img_bg" src="http://p1tbqu4i5.bkt.clouddn.com/p-1.jpg?e=1529614956&amp;token=2hlwAyoPtBHVKU1i4lV6FuSiPhfGGVLvvqKG4zC2:w85d4SwopzDl8bhxZ_BTen4gZDo=" alt="产品图示">
             <div class="title">
-                <span class="big">{{ products.0.title_big }}
-                    <span class="small">{{ products.0.title_after_big }}</span>
+                <span class="big">Snap Button
+                    <span class="small"></span>
                 </span>
-                <span class="small">{{ products.0.title_small }}</span>
+                <span class="small">卡纽</span>
             </div>
         </a>
     </div>
     <div class="div_half">
         <div class="div_half_half">
-            <a href="{% url 'main_product_content' products.1.id %}">
-                <img class="img_bg" src="{{ imgs.1 }}" alt="产品图示">
+            <a href="product2.html">
+                <img class="img_bg" src="http://p1tbqu4i5.bkt.clouddn.com/p-2.jpg?e=1529614956&amp;token=2hlwAyoPtBHVKU1i4lV6FuSiPhfGGVLvvqKG4zC2:amopos0nlUDgVZ4c06CEoqZTTKg=" alt="产品图示">
                 <div class="title">
-                    <span class="big">{{ products.1.title_big }}
-                        <span class="small">{{ products.1.title_after_big }}</span>
+                    <span class="big">Jeans
+                        <span class="small"></span>
                     </span>
-                    <span class="small">{{ products.1.title_small }}</span></div>
+                    <span class="small">牛仔裤</span></div>
             </a>
         </div>
         <div class="div_half_half">
-            <a href="{% url 'main_product_content' products.2.id %}">
-                <img class="img_bg" src="{{ imgs.2 }}" alt="产品图示">
+            <a href="product3.html">
+                <img class="img_bg" src="http://p1tbqu4i5.bkt.clouddn.com/p-3.jpg?e=1529614956&amp;token=2hlwAyoPtBHVKU1i4lV6FuSiPhfGGVLvvqKG4zC2:fPZPxjUS0BM7E7Ws9v7NUZ_wz0w=" alt="产品图示">
                 <div class="title">
-                    <span class="big">{{ products.2.title_big }}
-                        <span class="small">{{ products.2.title_after_big }}</span>
+                    <span class="big">Rivet
+                        <span class="small"></span>
                     </span>
-                    <span class="small">{{ products.2.title_small }}</span>
+                    <span class="small">铆扣</span>
                 </div>
             </a>
         </div>
     </div>
     <div class="div_bottom">
-        <a href="{% url 'main_product_content' products.3.id %}">
-            <img class="img_bg" src="{{ imgs.3 }}" alt="产品图示">
+        <a href="product4.html">
+            <img class="img_bg" src="http://p1tbqu4i5.bkt.clouddn.com/p-4.jpg?e=1529614956&amp;token=2hlwAyoPtBHVKU1i4lV6FuSiPhfGGVLvvqKG4zC2:dckigtzo4HIRXgtqYmgMv6qL8Tk=" alt="产品图示">
             <div class="title">
-                <span class="big">{{ products.3.title_big }}
-                        <span class="small">{{ products.3.title_after_big }}</span>
+                <span class="big">Metal &amp; Belt
+                        <span class="small"></span>
                 </span>
-                <span class="small">{{ products.3.title_small }}</span>
+                <span class="small">金属扣&amp;带扣</span>
             </div>
         </a>
     </div>
-{% endblock %}
+
+				</div>
+
+			</section>
+		
+		
+	</div>
+
+</body></html>
