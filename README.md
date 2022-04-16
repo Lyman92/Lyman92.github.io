@@ -1,3 +1,0 @@
-# GOOD Job
-
-Help yourself
